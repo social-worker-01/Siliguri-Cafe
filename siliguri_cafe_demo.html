@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Siliguri Café — Demo Website</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:#222;background:#fff}
+nav{position:fixed;top:0;left:0;right:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);padding:15px 7%;display:flex;align-items:center;justify-content:space-between;box-shadow:0 2px 15px #00000012}
+.logo{font-size:21px;font-weight:800}
+.logo span{color:#d97706}
+nav a{color:#222;text-decoration:none;margin-left:20px;font-size:14px;font-weight:600}
+.hero{min-height:100vh;padding:130px 8% 70px;display:flex;align-items:center;justify-content:space-between;gap:40px;background:linear-gradient(135deg,#fff7ed,#ffffff 55%,#ffedd5)}
+.hero-text{max-width:600px}
+.badge{display:inline-block;padding:8px 13px;border-radius:99px;background:#ffedd5;color:#9a3412;font-weight:700;font-size:13px;margin-bottom:18px}
+h1{font-size:clamp(42px,7vw,76px);line-height:.98;margin-bottom:22px}
+h1 span{color:#d97706}
+.hero p{font-size:18px;line-height:1.7;color:#666;margin-bottom:28px}
+.btn{display:inline-block;padding:14px 22px;border-radius:12px;text-decoration:none;font-weight:700;margin-right:8px}
+.primary{background:#d97706;color:#fff}
+.secondary{border:1px solid #ddd;color:#333;background:#fff}
+.cup{width:min(390px,80vw);aspect-ratio:1;border-radius:35% 65% 55% 45%;background:linear-gradient(145deg,#f59e0b,#92400e);display:flex;align-items:center;justify-content:center;font-size:120px;box-shadow:25px 30px 70px #92400e33;transform:rotate(-5deg)}
+section{padding:85px 8%}
+.section-title{text-align:center;margin-bottom:40px}
+.section-title h2{font-size:36px;margin-bottom:10px}
+.section-title p{color:#777}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:1100px;margin:auto}
+.card{padding:28px;border:1px solid #eee;border-radius:20px;background:#fff;box-shadow:0 10px 30px #00000008}
+.card .icon{font-size:38px;margin-bottom:15px}
+.card h3{margin-bottom:10px}
+.card p{color:#666;line-height:1.6}
+.menu{background:#fff7ed}
+.menu-grid{max-width:850px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.item{background:#fff;padding:18px 20px;border-radius:14px;display:flex;justify-content:space-between;gap:15px}
+.price{font-weight:800;color:#d97706}
+.contact{text-align:center}
+.contact p{color:#666;margin:10px 0 25px;line-height:1.7}
+footer{text-align:center;background:#171717;color:#aaa;padding:28px}
+footer strong{color:#fff}
+@media(max-width:750px){
+ nav{padding:13px 5%}
+ nav .links{display:none}
+ .hero{padding:120px 7% 60px;flex-direction:column;text-align:center}
+ .cup{width:250px;font-size:80px}
+ .cards{grid-template-columns:1fr}
+ .menu-grid{grid-template-columns:1fr}
+ section{padding:65px 7%}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Siliguri <span>Café</span></div>
+  <div class="links">
+    <a href="#home">Home</a>
+    <a href="#menu">Menu</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<section class="hero" id="home">
+  <div class="hero-text">
+    <div class="badge">☕ Fresh • Local • Made Daily</div>
+    <h1>Your daily cup of <span>happiness.</span></h1>
+    <p>A cozy café in the heart of Siliguri serving fresh coffee, snacks and good vibes. Drop in, relax and make yourself at home.</p>
+    <a class="btn primary" href="#menu">View Menu</a>
+    <a class="btn secondary" href="#contact">Contact Us</a>
+  </div>
+  <div class="cup">☕</div>
+</section>
+
+<section id="about">
+  <div class="section-title">
+    <h2>Why people visit us</h2>
+    <p>A simple section you can customize for any real business.</p>
+  </div>
+  <div class="cards">
+    <div class="card"><div class="icon">☕</div><h3>Fresh Coffee</h3><p>Freshly prepared coffee made with carefully selected beans.</p></div>
+    <div class="card"><div class="icon">🥐</div><h3>Fresh Snacks</h3><p>Tasty snacks and quick bites prepared fresh every day.</p></div>
+    <div class="card"><div class="icon">❤️</div><h3>Friendly Place</h3><p>A comfortable space to meet friends, study or simply relax.</p></div>
+  </div>
+</section>
+
+<section class="menu" id="menu">
+  <div class="section-title">
+    <h2>Popular Menu</h2>
+    <p>Replace these items with the customer's actual menu.</p>
+  </div>
+  <div class="menu-grid">
+    <div class="item"><span>Classic Cappuccino</span><span class="price">₹120</span></div>
+    <div class="item"><span>Cold Coffee</span><span class="price">₹140</span></div>
+    <div class="item"><span>Masala Tea</span><span class="price">₹60</span></div>
+    <div class="item"><span>Veg Sandwich</span><span class="price">₹110</span></div>
+    <div class="item"><span>French Fries</span><span class="price">₹100</span></div>
+    <div class="item"><span>Chocolate Brownie</span><span class="price">₹130</span></div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="section-title">
+    <h2>Visit Us</h2>
+    <p>Hakimpara, Siliguri • Open daily 9 AM – 9 PM</p>
+  </div>
+  <a class="btn primary" href="tel:+919999999999">📞 Call Us</a>
+  <a class="btn secondary" href="https://wa.me/919999999999">💬 WhatsApp</a>
+</section>
+
+<footer>
+  <strong>Siliguri Café</strong><br><br>
+  Demo website — replace the business name, photos, menu, address and contact details.
+</footer>
+
+</body>
+</html>
